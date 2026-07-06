@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sublime Hotel Boutique | Concepcion, Paraguay</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#656461",
+                        "over-black": "#1A1918",
+                        "on-primary-container": "#ffc4b1",
+                        "surface-container-low": "#fff1ed",
+                        "on-surface-variant": "#54433e",
+                        "secondary-fixed": "#e5e2dd",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "secondary-container": "#e5e2dd",
+                        "terracotta": "#8C462E",
+                        "primary": "#6f3019",
+                        "on-background": "#211a18",
+                        "surface-container": "#faebe6",
+                        "on-primary-fixed": "#390c00",
+                        "on-secondary-fixed-variant": "#474743",
+                        "on-surface": "#211a18",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#61584d",
+                        "surface-tint": "#924a32",
+                        "surface-variant": "#eedfdb",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#372f2c",
+                        "background": "#fff8f6",
+                        "secondary": "#5f5e5b",
+                        "on-tertiary-container": "#dccfc1",
+                        "creme": "#F5F2ED",
+                        "surface-bright": "#fff8f6",
+                        "outline": "#87736d",
+                        "stone-light": "#E8E4DE",
+                        "tertiary-fixed": "#eee0d2",
+                        "primary-container": "#8c462e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#f4e5e1",
+                        "primary-fixed-dim": "#ffb59d",
+                        "inverse-primary": "#ffb59d",
+                        "tertiary": "#494137",
+                        "on-tertiary-fixed-variant": "#4e453b",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1c1c19",
+                        "tertiary-fixed-dim": "#d1c5b7",
+                        "surface-container-highest": "#eedfdb",
+                        "error-container": "#ffdad6",
+                        "timber": "#4A4238",
+                        "surface-dim": "#e6d7d3",
+                        "surface": "#fff8f6",
+                        "on-tertiary-fixed": "#211b12",
+                        "on-primary-fixed-variant": "#74341d",
+                        "outline-variant": "#d9c1ba",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#fdede9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdbd0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "section-gap-desktop": "120px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-sm": ["DM Sans"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["DM Sans"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-md": ["DM Sans"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* ── Modal overlay ── */
+        #booking-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(26, 25, 24, 0.65);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        #booking-modal.open {
+            display: flex;
+            opacity: 1;
+        }
+        #booking-modal.closing {
+            opacity: 0;
+        }
+
+        /* ── Modal panel ── */
+        #booking-panel {
+            background: #FFF8F6;
+            max-width: 680px;
+            width: 100%;
+            max-height: 92vh;
+            overflow-y: auto;
+            border: 1px solid rgba(74,66,56,0.12);
+            transform: translateY(32px) scale(0.98);
+            transition: transform 0.38s cubic-bezier(0.22,1,0.36,1), opacity 0.35s ease;
+            opacity: 0;
+            scrollbar-width: thin;
+            scrollbar-color: #c9b8b2 transparent;
+        }
+        #booking-modal.open #booking-panel {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        #booking-modal.closing #booking-panel {
+            transform: translateY(20px) scale(0.98);
+            opacity: 0;
+        }
+
+        /* ── Form inputs ── */
+        .booking-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(135,115,109,0.35);
+            background: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            color: #211a18;
+            outline: none;
+            border-radius: 2px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        .booking-input:focus {
+            border-color: #8C462E;
+            box-shadow: 0 0 0 3px rgba(140,70,46,0.1);
+        }
+        .booking-input::placeholder {
+            color: #a08e89;
+        }
+        .booking-label {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #4A4238;
+            margin-bottom: 6px;
+        }
+        .booking-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238C462E' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        /* ── Success state ── */
+        #form-success {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 48px 40px;
+            text-align: center;
+        }
+        #form-success.show { display: flex; }
+
+        /* ── Scrollbar ── */
+        #booking-panel::-webkit-scrollbar { width: 6px; }
+        #booking-panel::-webkit-scrollbar-track { background: transparent; }
+        #booking-panel::-webkit-scrollbar-thumb { background: #c9b8b2; border-radius: 3px; }
+
+        /* ── Anchor offset so sticky header doesn't cover section titles ── */
+        #el-hotel, #habitaciones, #testimonios {
+            scroll-margin-top: 96px;
+        }
+
+        /* ── Sticky header elevation on scroll ── */
+        header.scrolled {
+            box-shadow: 0 2px 16px rgba(26, 25, 24, 0.08);
+        }
+
+        /* ── Mobile menu collapse/expand ── */
+        #mobile-menu {
+            max-height: 0;
+        }
+        #mobile-menu.open {
+            max-height: 320px;
+        }
+
+        /* ── Floating booking button ── */
+        #floating-cta {
+            opacity: 0;
+            transform: translateY(16px) scale(0.96);
+            pointer-events: none;
+            transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        #floating-cta.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden" data-mode="connect">
+<!-- Header / TopNavBar -->
+<header class="bg-background/90 dark:bg-over-black/90 backdrop-blur-md docked full-width top-0 sticky border-b border-timber/10 dark:border-white/5 flat no shadows z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-[1280px] mx-auto">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed" href="#">
+                Sublime Hotel Boutique
+            </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 font-label-md text-label-md tracking-widest uppercase">
+<a class="text-primary font-bold border-b-2 border-terracotta pb-1" href="#el-hotel">El Hotel</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#habitaciones">Habitaciones</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="https://www.google.com/maps/place/Sublime+Hotel+Boutique/@-23.4067183,-57.4499155,17z/data=!4m8!3m7!1s0x94669d0011846e95:0x802cc7167d5315d4!8m2!3d-23.4067183!4d-57.4499155!9m1!1b1!16s%2Fg%2F11yj9t1l2d" target="_blank" rel="noopener noreferrer">Ubicación</a>
+</nav>
+<button onclick="openBookingModal()" class="bg-terracotta text-creme px-6 py-3 rounded hover:bg-primary transition-colors font-label-md uppercase tracking-wider text-sm hidden md:block">
+                Reservar
+            </button>
+<!-- Mobile Menu Toggle -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden text-primary" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+<!-- Mobile Nav Panel -->
+<div class="md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out bg-background border-t border-timber/10" id="mobile-menu">
+<nav class="flex flex-col px-margin-mobile py-2 font-label-md text-label-md tracking-widest uppercase">
+<a class="py-3 text-primary font-bold border-b border-timber/10" href="#el-hotel" onclick="closeMobileMenu()">El Hotel</a>
+<a class="py-3 text-secondary border-b border-timber/10" href="#habitaciones" onclick="closeMobileMenu()">Habitaciones</a>
+<a class="py-3 text-secondary border-b border-timber/10" href="https://www.google.com/maps/place/Sublime+Hotel+Boutique/@-23.4067183,-57.4499155,17z/data=!4m8!3m7!1s0x94669d0011846e95:0x802cc7167d5315d4!8m2!3d-23.4067183!4d-57.4499155!9m1!1b1!16s%2Fg%2F11yj9t1l2d" rel="noopener noreferrer" target="_blank">Ubicación</a>
+<button class="mt-4 mb-2 bg-terracotta text-creme px-6 py-3 rounded hover:bg-primary transition-colors font-label-md uppercase tracking-wider text-sm" onclick="closeMobileMenu(); openBookingModal();">Reservar</button>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Elegante entrada del Sublime Hotel Boutique con puerta de madera arqueada, lámparas de pared clásicas y detalles arquitectónicos coloniales." class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwpdO6NkgBSsCPazQdS3BUmNtDC-beBsMce6yrmQeAD16_aDHMLNTHPFPS4xhLNt9Qe1HYwDp38EmjAyWErsY0Ce0q0MHR0xuhN0lGeNtNlDAd3zZbNuHwOsROtlIYRxUVyZRkBXn8lUuXtQcG8aAneVJm6Aa6PCumSwpyxy9qBdsZZZXqyI57MX3DyOGqu38iAip15vd3ZQVHSf1ZPbMZSFsfiNjefTVZ3vZELL-UNLp-6Qy3y4dVIH8MxS0-jLXnTyoZYg9QwfE"/>
+<div class="absolute inset-0 bg-over-black/30 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center gap-8">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-creme drop-shadow-lg">
+                    Un refugio de lujo pausado en el corazón de Concepción
+                </h1>
+<button onclick="openBookingModal()" class="bg-terracotta text-creme px-8 py-4 rounded hover:bg-primary transition-colors font-label-sm tracking-widest uppercase mt-4">
+                    Reservar tu estadía
+                </button>
+</div>
+</section>
+<!-- Nuestra Historia -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto" id="el-hotel">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+<div class="flex flex-col gap-8 order-2 md:order-1">
+<h2 class="font-headline-md text-headline-md text-primary">Nuestra Historia</h2>
+<p class="font-body-lg text-on-surface-variant">
+                        Sublime Hotel Boutique nace de la pasión por restaurar la grandeza arquitectónica de Concepción, fusionando la elegancia colonial con el confort contemporáneo. Cada rincón ha sido diseñado para invitar a la pausa, al silencio y al disfrute de los materiales nobles.
+                    </p>
+<blockquote class="border-l-2 border-terracotta pl-6 py-2 italic font-headline-lg text-xl text-primary my-4">
+                        "El lujo verdadero reside en el tiempo, el espacio y la atención al detalle."
+                    </blockquote>
+</div>
+<div class="relative h-[500px] w-full order-1 md:order-2">
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-stone-light/50 -z-10"></div>
+<img alt="Una elegante escalera de mármol con barandillas de hierro forjado intrincadas en un vestíbulo de techos altos con grandes ventanales y candelabros de cristal." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbuklKhsTDzwcww6XtTSoiFxtB2AO52ws6KnB3IAEpyvSjYYYl6jESZF1wD2WPcEwJsoQc16nfFrwjZb5MB6n-rfAldCb1sCH0q9lsxjxfwRhV7sJJArkdGMy0QeNqy_0yteEJeVFaAEQ19imyAgKKxynmfNcyIhIdElWy8RfLGBz7SGPQ9ErjgVWtSQK5UfHVwg2mhjEsrHi-ADSWOmdWtD2sjP0NCF9whXii29eNdfPnG211yH1Isvn-7NZdqASWBm9IGRTJfNE"/></div>
+</div>
+</section>
+<!-- Habitaciones -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="habitaciones">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Habitaciones &amp; Suites</h2>
+<p class="max-w-2xl text-on-surface-variant font-body-md">Espacios diseñados para el descanso profundo, donde la madera natural, los linos puros y la luz natural son los protagonistas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Room 1 -->
+<div class="bg-creme group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-[300px] overflow-hidden">
+<img alt="Suite Sublime: Habitación luminosa con cama matrimonial, escritorio de madera con TV y grandes ventanales con cortinas claras." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0b67DaW7J3vBj_Bj94m9R3nxRR41QZanzDWsJY69H6ezp6QobjBpumet2kpWIcSgGIzrFjLFeltpKavcp49JA8EM6GzGIW0N-wkJvkfvKAIOw2V5jOCustLbL79Edt-I4T4ObrInEMlrc-H4vKUgjPi91Imps2_ZFaYRlK2B-hp1AQ4PG-qqYjnNMesp0XsVLPjAVIAXgTklSolxCtOdBWLQ0doZCpcwM8O8Skd_JJ8QAut8Ospqli7o_k-z4tQvqJIp7Iw4ZZ3kL1Q"/>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex gap-2 mb-2">
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">King Size</span>
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">Balcón</span>
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-0.5 rounded-full uppercase tracking-wider text-timber/60">Desayuno incluido</span></div>
+<h3 class="font-headline-md text-2xl text-primary">Suite Habitación Single</h3>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Aire acondicionado split, secador de pelo, frigobar, WiFi de alta velocidad</p>
+<a class="mt-4 font-label-md text-terracotta underline group-hover:text-primary transition-colors" href="#"><br/></a>
+</div>
+</div>
+<!-- Room 2 -->
+<div class="bg-creme group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Habitación de hotel boutique con cama matrimonial, sábanas blancas impecables, paredes de yeso texturizado, muebles de madera rústica y una ventana con postigos de madera abierta hacia un jardín interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD2mzgKA8jpZYPer55XYpxtAgavzTOxcEW6FVRP4Ftb340CEDp78748ADK5xBMs8aUkyFYtS14rZjxhLKfgyZTCMPyt4bRVZMZ2YM1gv4gaFBd-aDD7cAxK3rZ-eW_1w6_GwJqC8jTCF-ForKia3xblZv4TVFxeTtmFfgcx6twac8Fkv1VQDGyXfqmtBWC78Yd8TX5tyrgmkiswmkxLZa2taXfEQdhj42HOAcLPICL9t7PvWZpk-p1Fc0bovxKPKVGiBdKKvJ0IfyyQQ"/>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex gap-2 mb-2">
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">DOBLES QUEEN Size</span><span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">MATRIMONIAL King Size</span>
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-0.5 rounded-full uppercase tracking-wider text-timber/60">Desayuno incluido</span></div>
+<h3 class="font-headline-md text-2xl text-primary">Habitación Doble o Matrimonial</h3>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Aire acondicionado split, secador de pelo, frigobar, WiFi de alta velocidad</p>
+<a class="mt-4 font-label-md text-terracotta underline group-hover:text-primary transition-colors" href="#"><br/></a>
+</div>
+</div>
+<!-- Room 3 -->
+<div class="bg-creme group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-[300px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Habitación moderna y minimalista en tonos tierra, con cama baja, detalles en madera clara, textiles de lino natural y una atmósfera serena y luminosa." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-_PU8dDEXhF6XRK-iV1tfvXIynFXrWqbt424-4nYvzstcabw-Kji3vX3-4cBma6NJwc5Z1Jq_Ued7iaMZcRmdcnOBMu8Blf0HFxWjcCqL8FviRzXEVp1yiTfFIOS2HnGWV-LhiGsYxsS45LKbG52X-poGOpyehjcK-cHgz8WR515PkUHmbgTk2-JhDcjygsidh1IZ9RyA21EFZylPhok08yZOLV7m-Cp-gM7SM8B0qNxrU2XIl4Z54MzodyXTkZrzuD8iZHDERthvRA"/>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex gap-2 mb-2">
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">King Size</span>
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-1 rounded text-timber uppercase tracking-widest">Habitaciones y camas amplias</span>
+<span class="font-label-sm text-xs border border-timber/20 px-2 py-0.5 rounded-full uppercase tracking-wider text-timber/60">Desayuno incluido</span></div>
+<h3 class="font-headline-md text-2xl text-primary">Suite Sublime</h3>
+<p class="text-on-surface-variant font-body-md line-clamp-2">Habitaciones más amplias, sofa, Aire acondicionado split, secador de pelo, frigobar, WiFi de alta velocidad </p>
+<a class="mt-4 font-label-md text-terracotta underline group-hover:text-primary transition-colors" href="#"><br/></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-background px-margin-mobile md:px-margin-desktop" id="testimonios">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Lo que dicen nuestros huéspedes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-creme p-8 flex flex-col gap-6 border border-timber/10">
+<div class="flex text-terracotta">
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+</div>
+<p class="font-display-lg italic text-xl text-on-surface-variant leading-relaxed">
+          "Una joya en el corazón de Concepción. La restauración del edificio es impecable y la atención nos hizo sentir como en casa. El desayuno en el patio es una experiencia sublime."
+        </p>
+<div class="mt-auto">
+<p class="font-label-md text-timber uppercase tracking-widest">Maria L.</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-creme p-8 flex flex-col gap-6 border border-timber/10">
+<div class="flex text-terracotta">
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+</div>
+<p class="font-display-lg italic text-xl text-on-surface-variant leading-relaxed">
+          "La mejor opción boutique en la ciudad. Silencioso, sofisticado y con una terraza con vistas increíbles al atardecer. Totalmente recomendado para quienes buscan algo exclusivo."
+        </p>
+<div class="mt-auto">
+<p class="font-label-md text-timber uppercase tracking-widest">Javier R.</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-creme p-8 flex flex-col gap-6 border border-timber/10">
+<div class="flex text-terracotta">
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+</div>
+<p class="font-display-lg italic text-xl text-on-surface-variant leading-relaxed">
+          "Un lugar mágico. La combinación de historia y lujo contemporáneo está muy bien lograda. Volveremos sin duda."
+        </p>
+<div class="mt-auto">
+<p class="font-label-md text-timber uppercase tracking-widest">Elena G.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="font-label-md text-terracotta underline hover:text-primary transition-colors uppercase tracking-widest" href="https://www.google.com/maps/place/Sublime+Hotel+Boutique/@-23.4067183,-57.4499155,17z/data=!4m8!3m7!1s0x94669d0011846e95:0x802cc7167d5315d4!8m2!3d-23.4067183!4d-57.4499155!9m1!1b1!16s%2Fg%2F11yj9t1l2d" rel="noopener noreferrer" target="_blank">Ver más reseñas</a>
+</div>
+</div>
+</section><footer class="bg-creme dark:bg-over-black full-width py-section-gap-mobile md:py-16 bg-stone-light/30 dark:bg-white/5 flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop w-full max-w-[1280px] mx-auto gap-gutter">
+<div class="font-display-lg text-headline-sm text-primary mb-6 md:mb-0">
+                    Sublime Hotel Boutique
+                </div>
+<div class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<a class="text-secondary hover:text-terracotta transition-colors" href="#">Privacidad</a>
+<a class="text-secondary hover:text-terracotta transition-colors" href="#">Términos</a>
+<a class="text-secondary hover:text-terracotta transition-colors" href="#">Prensa</a>
+<a class="text-secondary hover:text-terracotta transition-colors" href="#">Contacto</a>
+</div>
+<div class="text-timber dark:text-tertiary-fixed-dim font-body-md text-sm mt-6 md:mt-0 opacity-80 hover:opacity-100">
+                    © 2024 Sublime Hotel Boutique. Concepción, Paraguay.
+                </div>
+</div>
+</footer>
+</main>
+
+<!-- Floating booking CTA -->
+<button id="floating-cta" onclick="openBookingModal()" aria-label="Reservar tu estadía" class="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-terracotta text-creme pl-5 pr-6 py-4 rounded-full shadow-xl hover:bg-primary hover:shadow-2xl">
+<span class="material-symbols-outlined filled-icon text-xl">calendar_month</span>
+<span class="font-label-md text-sm uppercase tracking-wider whitespace-nowrap">Reservar tu estadía</span>
+</button>
+
+<!-- ══════════════════════════════════════════
+     BOOKING MODAL
+══════════════════════════════════════════ -->
+<div id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="handleOverlayClick(event)">
+  <div id="booking-panel">
+
+    <!-- Header -->
+    <div style="padding: 32px 40px 24px; border-bottom: 1px solid rgba(74,66,56,0.1); display:flex; justify-content:space-between; align-items:flex-start;">
+      <div>
+        <p style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8C462E; margin:0 0 6px;">Sublime Hotel Boutique</p>
+        <h2 id="modal-title" style="font-family:'Libre Caslon Text',serif; font-size:28px; font-weight:400; color:#6f3019; margin:0; line-height:1.2;">Solicitar Reserva</h2>
+      </div>
+      <button onclick="closeBookingModal()" aria-label="Cerrar" style="background:none; border:none; cursor:pointer; padding:4px; color:#87736d; line-height:1;">
+        <span class="material-symbols-outlined" style="font-size:24px;">close</span>
+      </button>
+    </div>
+
+    <!-- Form -->
+    <form id="booking-form" onsubmit="handleFormSubmit(event)" novalidate>
+      <!-- Formspree hidden fields -->
+      <input type="hidden" name="_subject" value="🏨 Nueva solicitud de reserva — Sublime Hotel Boutique" />
+      <input type="hidden" name="_replyto" id="_replyto" value="" />
+      <input type="hidden" name="_language" value="es" />
+      <!-- 🛡️ Honeypot anti-spam: oculto para humanos, los bots lo llenan -->
+      <input type="text" name="_gotcha" id="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+      <div style="padding: 32px 40px;">
+
+        <!-- Section: Datos personales -->
+        <p style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8C462E; margin: 0 0 20px;">Datos personales</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div>
+            <label class="booking-label" for="first-name">Nombre</label>
+            <input class="booking-input" type="text" id="first-name" name="first-name" placeholder="Ej: María" required maxlength="60" autocomplete="given-name" />
+          </div>
+          <div>
+            <label class="booking-label" for="last-name">Apellido</label>
+            <input class="booking-input" type="text" id="last-name" name="last-name" placeholder="Ej: González" required maxlength="60" autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div>
+            <label class="booking-label" for="email">Correo electrónico</label>
+            <input class="booking-input" type="email" id="email" name="email" placeholder="correo@ejemplo.com" required maxlength="120" autocomplete="email" />
+          </div>
+          <div>
+            <label class="booking-label" for="phone">Número de teléfono</label>
+            <input class="booking-input" type="tel" id="phone" name="phone" placeholder="+595 9XX XXX XXX" required maxlength="20" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px;">
+          <div>
+            <label class="booking-label" for="nationality">Nacionalidad</label>
+            <select class="booking-input booking-select" id="nationality" name="nationality" required>
+              <option value="" disabled selected>Seleccionar país</option>
+              <option>Paraguay</option>
+              <option>Argentina</option>
+              <option>Brasil</option>
+              <option>Uruguay</option>
+              <option>Bolivia</option>
+              <option>Chile</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label class="booking-label" for="document">Nº de documento / pasaporte</label>
+            <input class="booking-input" type="text" id="document" name="document" placeholder="Ej: 4.567.890" maxlength="30" />
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height:1px; background:rgba(74,66,56,0.1); margin-bottom:28px;"></div>
+
+        <!-- Section: Detalles de la estadía -->
+        <p style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8C462E; margin: 0 0 20px;">Detalles de la estadía</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div>
+            <label class="booking-label" for="checkin">Check-in</label>
+            <input class="booking-input" type="date" id="checkin" name="checkin" required />
+          </div>
+          <div>
+            <label class="booking-label" for="checkout">Check-out</label>
+            <input class="booking-input" type="date" id="checkout" name="checkout" required />
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div>
+            <label class="booking-label" for="adults">Adultos</label>
+            <select class="booking-input booking-select" id="adults" name="adults">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+            </select>
+          </div>
+          <div>
+            <label class="booking-label" for="children">Niños</label>
+            <select class="booking-input booking-select" id="children" name="children">
+              <option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div>
+            <label class="booking-label" for="rooms">Habitaciones</label>
+            <select class="booking-input booking-select" id="rooms" name="rooms">
+              <option selected>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label class="booking-label" for="room-type">Tipo de habitación</label>
+          <select class="booking-input booking-select" id="room-type" name="room-type">
+            <option value="" disabled selected>Seleccionar tipo</option>
+            <option>Habitación Matrimonial con Cama Adicional – Habitación Triple</option>
+            <option>Habitación Doble – Dobles Queen Size</option>
+            <option>Habitación Matrimonial – King Size</option>
+            <option>Suite Sublime – King Size</option>
+          </select>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px;">
+          <div>
+            <label class="booking-label" for="arrival-time">Hora estimada de llegada</label>
+            <select class="booking-input booking-select" id="arrival-time" name="arrival-time">
+              <option value="" disabled selected>Seleccionar hora</option>
+              <option>Antes de las 12:00</option>
+              <option>12:00 – 14:00</option>
+              <option>14:00 – 16:00</option>
+              <option>16:00 – 18:00</option>
+              <option>18:00 – 20:00</option>
+              <option>Después de las 20:00</option>
+            </select>
+          </div>
+          <div>
+            <label class="booking-label" for="regime">Régimen</label>
+            <select class="booking-input booking-select" id="regime" name="regime">
+              <option>Solo alojamiento</option>
+              <option selected>Alojamiento + Desayuno</option>
+              <option>Media pensión</option>
+              <option>Pensión completa</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height:1px; background:rgba(74,66,56,0.1); margin-bottom:28px;"></div>
+
+        <!-- Section: Preferencias y solicitudes -->
+        <p style="font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8C462E; margin: 0 0 20px;">Preferencias y solicitudes</p>
+
+        <div style="margin-bottom:16px;">
+          <label class="booking-label" style="margin-bottom:12px;">Motivo de la estadía</label>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="reason" value="leisure" style="accent-color:#8C462E; width:16px;height:16px;"> Turismo / Ocio
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="reason" value="business" style="accent-color:#8C462E; width:16px;height:16px;"> Negocios
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="reason" value="honeymoon" style="accent-color:#8C462E; width:16px;height:16px;"> Luna de miel
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="reason" value="anniversary" style="accent-color:#8C462E; width:16px;height:16px;"> Aniversario
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="reason" value="family" style="accent-color:#8C462E; width:16px;height:16px;"> Viaje familiar
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label class="booking-label" style="margin-bottom:12px;">Servicios adicionales</label>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="extras" value="flowers" style="accent-color:#8C462E; width:16px;height:16px;"> Flores y decoración especial
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="extras" value="champagne" style="accent-color:#8C462E; width:16px;height:16px;"> Botella de champán
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="extras" value="earlycheck" style="accent-color:#8C462E; width:16px;height:16px;"> Early check-in
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; color:#54433e;">
+              <input type="checkbox" name="extras" value="latecheck" style="accent-color:#8C462E; width:16px;height:16px;"> Late check-out
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <label class="booking-label" for="special-requests">Solicitudes especiales</label>
+          <textarea class="booking-input" id="special-requests" name="special-requests" rows="3" placeholder="Alergias alimentarias, preferencias de almohada..."></textarea>
+        </div>
+
+        <!-- Error message -->
+        <p id="form-error" style="display:none; color:#ba1a1a; font-family:'DM Sans',sans-serif; font-size:13px; margin-bottom:16px;"></p>
+
+        <!-- Submit -->
+        <button type="submit" id="submit-btn" style="width:100%; background:#8C462E; color:#F5F2ED; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px; border:none; border-radius:2px; cursor:pointer; transition:background 0.25s;" onmouseover="this.style.background='#6f3019'" onmouseout="this.style.background='#8C462E'">
+          Enviar solicitud de reserva
+        </button>
+
+        <p style="font-family:'DM Sans',sans-serif; font-size:12px; color:#87736d; text-align:center; margin-top:16px; line-height:1.6;">
+          Recibirás una confirmación por correo en menos de 24 horas. La reserva no es vinculante hasta la confirmación del hotel.
+        </p>
+
+      </div>
+    </form>
+
+    <!-- Success state -->
+    <div id="form-success">
+      <span class="material-symbols-outlined filled-icon" style="font-size:56px; color:#8C462E;">check_circle</span>
+      <h3 style="font-family:'Libre Caslon Text',serif; font-size:26px; color:#6f3019; margin:0;">¡Solicitud enviada!</h3>
+      <p style="font-family:'DM Sans',sans-serif; color:#54433e; font-size:15px; max-width:340px; text-align:center; line-height:1.6; margin:0;">
+        Gracias por elegirnos. Nuestro equipo revisará tu solicitud y te contactará en menos de 24 horas para confirmar tu estadía.
+      </p>
+      <button onclick="closeBookingModal()" style="margin-top:8px; background:#8C462E; color:#F5F2ED; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 40px; border:none; border-radius:2px; cursor:pointer;">
+        Cerrar
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // ── Modal controls ──────────────────────────────────────────
+  function openBookingModal() {
+    const modal = document.getElementById('booking-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('floating-cta').classList.remove('visible');
+    // 🛡️ Registrar timestamp de apertura para el timing check
+    window._formOpenedAt = Date.now();
+    // Force reflow then animate in
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => { modal.classList.add('open'); });
+    });
+
+    // Set min check-in date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('checkin').min = today;
+    document.getElementById('checkout').min = today;
+  }
+
+  function closeBookingModal() {
+    const modal = document.getElementById('booking-modal');
+    modal.classList.add('closing');
+    modal.classList.remove('open');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      modal.classList.remove('closing');
+      document.body.style.overflow = '';
+      updateFloatingCta();
+    }, 380);
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('booking-modal')) {
+      closeBookingModal();
+    }
+  }
+
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeBookingModal();
+  });
+
+  // ── Mobile menu ───────────────────────────────────────────────
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    const btn  = document.getElementById('mobile-menu-btn');
+    const isOpen = menu.classList.contains('open');
+    menu.classList.toggle('open', !isOpen);
+    icon.textContent = isOpen ? 'menu' : 'close';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('mobile-menu-icon').textContent = 'menu';
+    document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
+  }
+
+  // ── Header elevation + floating CTA visibility on scroll ──────
+  const header = document.querySelector('header');
+  const floatingCta = document.getElementById('floating-cta');
+
+  function updateFloatingCta() {
+    const modalOpen = document.getElementById('booking-modal').classList.contains('open');
+    if (!modalOpen && window.scrollY > window.innerHeight * 0.6) {
+      floatingCta.classList.add('visible');
+    } else {
+      floatingCta.classList.remove('visible');
+    }
+  }
+
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+    updateFloatingCta();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── Check-out min date follows check-in ──────────────────────
+  document.getElementById('checkin').addEventListener('change', function () {
+    const nextDay = new Date(this.value);
+    nextDay.setDate(nextDay.getDate() + 1);
+    const minCheckout = nextDay.toISOString().split('T')[0];
+    const checkoutField = document.getElementById('checkout');
+    checkoutField.min = minCheckout;
+    if (checkoutField.value && checkoutField.value <= this.value) {
+      checkoutField.value = minCheckout;
+    }
+  });
+
+  // ════════════════════════════════════════════════════════════
+  //  CONFIGURACIÓN
+  // ════════════════════════════════════════════════════════════
+  const FORMSPREE_ID      = 'xpqgnaqy';  // ID de Formspree
+  const MIN_FILL_TIME_MS  = 4000;         // 🛡️ Tiempo mínimo para llenar el form (anti-bot)
+  const MAX_SUBMISSIONS   = 3;            // 🛡️ Máximo de envíos por sesión
+  const RATE_KEY          = 'slb_form_count'; // clave sessionStorage
+
+  // ════════════════════════════════════════════════════════════
+  //  🛡️ SEGURIDAD — Sanitización de texto
+  //  Elimina caracteres HTML peligrosos para prevenir XSS
+  // ════════════════════════════════════════════════════════════
+  function sanitize(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .trim();
+  }
+
+  // ════════════════════════════════════════════════════════════
+  //  ENVÍO DEL FORMULARIO
+  // ════════════════════════════════════════════════════════════
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const form    = e.target;
+    const errorEl = document.getElementById('form-error');
+    const btn     = document.getElementById('submit-btn');
+    errorEl.style.display = 'none';
+
+    // ── 🛡️ Capa 1: Honeypot ─────────────────────────────────
+    // Si el campo oculto tiene contenido, es un bot → rechazar silenciosamente
+    if (document.getElementById('_gotcha').value !== '') {
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('form-success').classList.add('show');
+      }, 1500);
+      return;
+    }
+
+    // ── 🛡️ Capa 2: Timing check ──────────────────────────────
+    // Bots llenan formularios en milisegundos; exigimos mínimo 4 segundos
+    const elapsed = Date.now() - window._formOpenedAt;
+    if (elapsed < MIN_FILL_TIME_MS) {
+      errorEl.textContent = 'Por favor revisá el formulario antes de enviarlo.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    // ── 🛡️ Capa 3: Rate limiting por sesión ─────────────────
+    // Máximo 3 envíos por sesión de navegador
+    const count = parseInt(sessionStorage.getItem(RATE_KEY) || '0', 10);
+    if (count >= MAX_SUBMISSIONS) {
+      errorEl.textContent = 'Has alcanzado el límite de solicitudes. Por favor contactanos directamente a contacto.hotelsublime@gmail.com';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    // ── 🛡️ Capa 4: Validación de campos obligatorios ─────────
+    const required = ['first-name', 'last-name', 'email', 'phone', 'checkin', 'checkout'];
+    for (const id of required) {
+      const field = document.getElementById(id);
+      if (!field.value.trim()) {
+        field.focus();
+        errorEl.textContent = 'Por favor completá todos los campos obligatorios.';
+        errorEl.style.display = 'block';
+        return;
+      }
+    }
+
+    // ── 🛡️ Capa 5: Sanitización + validaciones de formato ────
+    const emailVal = document.getElementById('email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      document.getElementById('email').focus();
+      errorEl.textContent = 'Por favor ingresá un correo electrónico válido.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    const phoneVal = document.getElementById('phone').value.trim();
+    if (!/^[\+\d\s\-\(\)]{6,20}$/.test(phoneVal)) {
+      document.getElementById('phone').focus();
+      errorEl.textContent = 'Por favor ingresá un número de teléfono válido.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    const firstNameVal = sanitize(document.getElementById('first-name').value);
+    const lastNameVal  = sanitize(document.getElementById('last-name').value);
+    if (firstNameVal.length < 2 || lastNameVal.length < 2) {
+      errorEl.textContent = 'El nombre y apellido deben tener al menos 2 caracteres.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    // Sincronizar _replyto con el email
+    document.getElementById('_replyto').value = emailVal;
+
+    btn.textContent = 'Enviando...';
+    btn.disabled    = true;
+    btn.style.opacity = '0.7';
+
+    // ── Envío a Formspree → reenvía a contacto.hotelsublime@gmail.com ──
+    fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Incrementar contador de sesión
+        sessionStorage.setItem(RATE_KEY, String(count + 1));
+        form.style.display = 'none';
+        document.getElementById('form-success').classList.add('show');
+      } else {
+        return response.json().then(data => {
+          throw new Error(data.errors ? data.errors.map(err => err.message).join(', ') : 'Error al enviar.');
+        });
+      }
+    })
+    .catch(() => {
+      errorEl.textContent = 'Hubo un error al enviar. Por favor intentá nuevamente o escribinos a contacto.hotelsublime@gmail.com';
+      errorEl.style.display = 'block';
+      btn.textContent   = 'Enviar solicitud de reserva';
+      btn.disabled      = false;
+      btn.style.opacity = '1';
+    });
+  }
+</script>
+
+</body></html>
